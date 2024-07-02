@@ -5,7 +5,7 @@ import Textform from "./components/Textform";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 import Home from "./components/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -37,67 +37,67 @@ function App() {
       setAlert(null);
     }, 1000);
   };
-  const router = createBrowserRouter([
-    {
-      path: "/textutils",
-      element: (
-        <>
-          <Navbar
-            title="TextFormat"
-            about="About Textutils"
-            mode={mode}
-            changeMode={changeMode}
-          />
-          <Alert alert={alert} />
-          <div className="container my-3">
-            <Textform
-              heading="Enter the text below"
-              mode={mode}
-              showAlert={showAlert}
-            />
-          </div>
-        </>
-      ),
-    },
-    {
-      path: "/Home",
-      element: (
-        <>
-          <Navbar
-            title="Textutils"
-            about="About Textutils"
-            mode={mode}
-            changeMode={changeMode}
-          />
-          <Alert alert={alert} />
-          <div className="container my-3">
-            <Home
-              heading="Enter the text below"
-              mode={mode}
-              showAlert={showAlert}
-            />
-          </div>
-        </>
-      ),
-    },
-    {
-      path: "/about",
-      element: (
-        <>
-          <Navbar
-            title="Textutils"
-            about="About Textutils"
-            mode={mode}
-            changeMode={changeMode}
-          />
-          <Alert alert={alert} /> <About mode={mode} />
-        </>
-      ),
-    },
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/textutils",
+  //     element: (
+  //       <>
+  //         <Navbar
+  //           title="Format-Flex"
+  //           about="About Format-Flex"
+  //           mode={mode}
+  //           changeMode={changeMode}
+  //         />
+  //         <Alert alert={alert} />
+  //         <div className="container my-3">
+  //           <Textform
+  //             heading="Enter the text below"
+  //             mode={mode}
+  //             showAlert={showAlert}
+  //           />
+  //         </div>
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     path: "/Home",
+  //     element: (
+  //       <>
+  //         <Navbar
+  //           title="Format-Flex"
+  //           about="About Format-Flex"
+  //           mode={mode}
+  //           changeMode={changeMode}
+  //         />
+  //         <Alert alert={alert} />
+  //         <div className="container my-3">
+  //           <Home
+  //             heading="Enter the text below"
+  //             mode={mode}
+  //             showAlert={showAlert}
+  //           />
+  //         </div>
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     path: "/about",
+  //     element: (
+  //       <>
+  //         <Navbar
+  //           title="Format-Flex"
+  //           about="About Format-Flex"
+  //           mode={mode}
+  //           changeMode={changeMode}
+  //         />
+  //         <Alert alert={alert} /> <About mode={mode} />
+  //       </>
+  //     ),
+  //   },
+  // ]);
   return (
     <>
-      {/* <Navbar
+      <Navbar
         title="Textutils"
         about="About Textutils"
         mode={mode}
@@ -110,14 +110,14 @@ function App() {
           mode={mode}
           showAlert={showAlert}
         />
-      </div> */}
+      </div>
       {/* <Textform
           heading="Enter the text below"
           mode={mode}
           showAlert={showAlert}
-        /> */}
+        />
       {/* <div className="container my-3"> */}
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
 
       {/* <About /> */}
       {/* </div> */}
